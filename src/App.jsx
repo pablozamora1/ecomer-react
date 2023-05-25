@@ -1,8 +1,14 @@
+import { CartWidget } from "./components/common/cartWidget/CartWidget";
+import { Navbar } from "./components/layout/navbar/Navbar";
+import { ItemListContainer } from "./components/pages/itemListContainer/itemListContainer";
 
-function App() {
-  
-
-  return  <h1>Estoy en una <applet></applet></h1>
+function app() {
+  return (
+    <div>
+      <Navbar />
+      <CartWidget />
+      <ItemListContainer />
+    </div>
+  );
 }
-
-export default App
+export default app;
