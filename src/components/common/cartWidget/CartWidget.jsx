@@ -1,10 +1,11 @@
 import { MdShoppingCartCheckout } from "react-icons/md";
+import styles from "./CartWidget.module.css";
 
 export const CartWidget = () => {
   return (
-    <div>
-      <MdShoppingCartCheckout color="black" size="20px" />
-      <span>4</span>
+    <div className={styles.CartWidget}>
+      <MdShoppingCartCheckout color="black" size="50px" />
+      <span> - 4 - </span>
     </div>
   );
 };

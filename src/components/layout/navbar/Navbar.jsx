@@ -1,14 +1,21 @@
+import { CartWidget } from "../../common/cartWidget/CartWidget";
+import styles from "./Navbar.module.css"
+
 export const Navbar = () => {
   return (
-    <div>
-      <h4>Compumundo Hipermegared logo</h4>
+    <div className={styles.navbar}>
+
+      <h4>Compumundo Hipermegared</h4>
       <ul>
-        <li>PCs De Escritorio</li>
-        <li>Noteboks</li>
-        <li>Placas de Video</li>
-        <li>Monitores</li>
-        <li>Micros</li>
+        <li><a href="">PCs De Escritorio</a></li>
+        <li><a href="">Noteboks</a> </li>
+        <li><a href="">Placas de Video</a> </li>
+        <li><a href="">Monitores</a> </li>
+        <li><a href="">Micros</a> </li>
       </ul>
+      <div>
+        <CartWidget />
+      </div>
     </div>
   );
 };
