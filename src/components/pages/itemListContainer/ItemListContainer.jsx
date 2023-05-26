@@ -1,9 +1,9 @@
-import styles from "./ItemListContainer.module.css";
+//import styles from "./ItemListContainer.module.css";
 
 export const ItemListContainer = ({ articulos }) => {
   return (
-    <div className={styles.banner}>
-      <h1>{articulos}</h1>
+    <div>
+      <h1 style={{display:"flex" ,flexDirection: "row" ,justifyContent: "center"}}>{articulos}</h1>
     </div>
   );
 };
