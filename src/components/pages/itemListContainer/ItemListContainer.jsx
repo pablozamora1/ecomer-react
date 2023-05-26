@@ -6,4 +6,5 @@ export const ItemListContainer = ({ articulos }) => {
       <h1 style={{display:"flex" ,flexDirection: "row" ,justifyContent: "center"}}>{articulos}</h1>
     </div>
   );
+  
 };
