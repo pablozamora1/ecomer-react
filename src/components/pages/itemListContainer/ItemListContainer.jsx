@@ -1,10 +1,12 @@
-//import styles from "./ItemListContainer.module.css";
+import { products } from "../../../productsMock";
+import ItemList from "./ItemList";
 
-export const ItemListContainer = ({ articulos }) => {
+// import styles from "./ItemListContainer.module.css";
+export const ItemListContainer = () => {
   return (
     <div>
-      <h1 style={{display:"flex" ,flexDirection: "row" ,justifyContent: "center"}}>{articulos}</h1>
+      <ItemList />
     </div>
   );
-  
 };
+

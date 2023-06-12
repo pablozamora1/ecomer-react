@@ -4,11 +4,10 @@ import { ItemListContainer } from "./components/pages/itemListContainer/itemList
 
 function app() {
 
-    let articulos = "Bienvenidos a la mejor tienda de productos para tu pc"
   return (
     <div>
       <Navbar />
-      <ItemListContainer articulos={articulos} />
+      <ItemListContainer />
     </div>
   );
 }
