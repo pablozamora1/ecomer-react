@@ -1,13 +1,20 @@
 
+import { ItemListContainer } from "./components/pages/itemListContainer/ItemListContainer";
+import{ ItemDetailContainer } from "./components/pages/itemDetail/ItemDetailContainer"
 import { Navbar } from "./components/layout/navbar/Navbar";
-import { ItemListContainer } from "./components/pages/itemListContainer/itemListContainer";
+
+
+
+
 
 function app() {
 
   return (
     <div>
-      <Navbar />
-      <ItemListContainer />
+      <Navbar>
+        <ItemListContainer />
+        <ItemDetailContainer />
+      </Navbar>
     </div>
   );
 }
