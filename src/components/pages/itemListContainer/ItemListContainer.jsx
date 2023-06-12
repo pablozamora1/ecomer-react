@@ -1,10 +1,27 @@
-//import styles from "./ItemListContainer.module.css";
+import { useEffect, useState } from "react";
 
-export const ItemListContainer = ({ articulos }) => {
-  return (
-    <div>
-      <h1 style={{display:"flex" ,flexDirection: "row" ,justifyContent: "center"}}>{articulos}</h1>
-    </div>
-  );
-  
+import { products } from "../../../productsMock";
+import ItemList from "./ItemList";
+
+const ItemListContainer = () => {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    const tarea = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(products);
+      }, 1000);
+      reject("la promesa salio mal ");
+    });
+
+    tarea
+      .then((respuesta) => setItems(respuesta))
+      .catch((rechazo) => {
+        console.log(rechazo);
+      });
+  }, []);
+
+  return <ItemList items={items} />;
 };
+
+export default ItemListContainer;
