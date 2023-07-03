@@ -1,17 +1,15 @@
-const ItemList = () => {
+import ProductCard from "../../common/productCard/ProductCard";
+import "./ItemListContainer.module.css";
+const ItemList = ({ items }) => {
+  
   return (
-    <div>
-      <h1
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "center",
-        }}
-      >
-        Bienvenidos a la mejor tienda de productos para tu pc
-      </h1>
+    <div className="cards-container">
+      {items.map((elemento) => {
+        return <ProductCard key={elemento.id} elemento={elemento} />;
+      })}
     </div>
   );
 };
 
 export default ItemList;
+
